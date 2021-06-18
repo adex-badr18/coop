@@ -1,0 +1,194 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+{% load crispy_forms_tags %}
+
+{% block title %}Login{% endblock %}
+{% block css %}
+<style>
+    /* Login page */
+.main-content{
+	width: 50%;
+	border-radius: 20px;
+	box-shadow: 0 5px 5px rgba(0,0,0,.4);
+	margin: 5px auto;
+	display: flex;
+}
+.company__info{
+	background-color: #37517e;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: #fff;
+}
+.bi-unlock{
+	font-size:3em;
+}
+@media screen and (max-width: 640px) {
+	.main-content{width: 90%;}
+	.company__info{
+		display: none;
+	}
+	.login_form{
+		border-top-left-radius:20px;
+		border-bottom-left-radius:20px;
+	}
+}
+@media screen and (min-width: 642px) and (max-width:800px){
+	.main-content{width: 70%;}
+}
+
+.cont {
+    margin-top: 10px;
+}
+
+.row > h2{
+	color:#37517e;
+}
+.login_form{
+	background-color: #fff;
+	border-top-right-radius:20px;
+	border-bottom-right-radius:20px;
+	border-top:1px solid #ccc;
+	border-right:1px solid #ccc;
+}
+form{
+	padding: 0 2em;
+}
+.form__input{
+	width: 100%;
+	border:0px solid transparent;
+	border-radius: 0;
+	border-bottom: 1px solid #aaa;
+	padding: 1em .5em .5em;
+	padding-left: 2em;
+	outline:none;
+	margin:1em auto;
+	transition: all .5s ease;
+}
+.form__input:focus{
+	border-bottom-color: #008080;
+	box-shadow: 0 0 5px rgba(0,80,80,.4);
+	border-radius: 4px;
+}
+.btn{
+	transition: all .5s ease;
+	width: 70%;
+	border-radius: 30px;
+	color:#37517e;
+	font-weight: 600;
+	background-color: #fff;
+	border: 1px solid #37517e;
+	margin-top: 1.5em;
+	margin-bottom: 1em;
+}
+.btn:hover, .btn:focus{
+	background-color: #37517e;
+	color:#fff;
+}
+
+</style>
+{% endblock %}
+
+{% block content %}
+<!--Header-->
+{% include 'navbar.html' %} <!--Navbar-->
+
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+
+            <ol>
+                <li><a href="">Home</a></li>
+                <li>Login</li>
+            </ol>
+            <h2>Login</h2>
+
+        </div>
+    </section><!-- End Breadcrumbs -->
+
+    <section class="inner-page bg-light">
+        <!--        <div class="container">-->
+        <!--            <form method="post">-->
+        <!--                {% csrf_token %}-->
+        <!--                {{ form.as_p }}-->
+        <!--                <input type="submit" value="Login">-->
+        <!--                <a href="#">Reset password</a>-->
+        <!--                <a href="{% url 'users:signup' %}">Create Account</a>-->
+        <!--            </form>-->
+
+
+        <!--            <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">-->
+        <!--                    <form action="" method="post" role="form" class="">-->
+        <!--                        <div class="form-group">-->
+        <!--                            <label for="email">E-mail</label>-->
+        <!--                            <input type="text" class="form-control" name="subject" id="email" required>-->
+        <!--                        </div>-->
+        <!--                        <div class="form-group">-->
+        <!--                            <label for="password">Password</label>-->
+        <!--                            <input type="text" class="form-control" name="subject" id="password" required>-->
+        <!--                        </div>-->
+        <!--                        <div class="my-3">-->
+        <!--                            <div class="loading">Loading</div>-->
+        <!--                            <div class="error-message"></div>-->
+        <!--                            <div class="sent-message">Your message has been sent. Thank you!</div>-->
+        <!--                        </div>-->
+        <!--                        <div class="text-center">-->
+        <!--                            <button type="submit">Login</button>-->
+        <!--                        </div>-->
+        <!--                    </form>-->
+        <!--                </div>-->
+        <!--            <div class="col-lg-5"></div>-->
+        <!--        </div>-->
+        <div class="container-fluid">
+            <div class="row main-content bg-success text-center">
+                <div class="col-md-4 text-center company__info">
+                    <span class="company__logo"><h2><span class="bi bi-unlock"></span></h2></span>
+<!--                    <h4 class="company_title">Your Company Logo</h4>-->
+                </div>
+                <div class="col-md-8 col-xs-12 col-sm-12 login_form ">
+                    <div class="container-fluid cont">
+                        <div class="row">
+                            <h2>Login to your account</h2>
+                        </div>
+                        <div class="row">
+                            <form control="" class="form-group" method="post">
+                                {% csrf_token %}
+                                <div class="row">
+                                    {% render_field form.email class="form__input" placeholder="Email" %}
+                                </div>
+                                <div class="row">
+                                    <!-- <span class="fa fa-lock"></span> -->
+                                    {% render_field form.password class="form__input" placeholder="Password" %}
+                                </div>
+                                <div class="row">
+                                    <div class="col mx-auto">
+                                        <input type="checkbox" name="remember_me" id="remember_me" class="mx-2">
+                                        <label for="remember_me" class="">Remember Me!</label>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-center">
+                                    <input type="submit" value="Login" class="btn">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="row">
+                            <div class="col mx-auto mb-4">
+                                <a href="#">Forgot Password?</a> |
+                                <a href="#">Register Here</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main><!-- End #main -->
+
+
+{% endblock %}

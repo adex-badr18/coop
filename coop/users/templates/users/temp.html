@@ -1,0 +1,21 @@
+<option value="">----------</option>
+{% for lga in lgas %}
+<option value="{{ lga.pk }}">{{ lga.name }}</option>
+{% endfor %}
+
+<script>
+        $("#id_state_of_origin").change(function (){
+            var url = $("#signupForm").attr("data-lgas-url");
+            var stateId = $(this).val();
+
+            $.ajax({
+                url: url,
+                data: {
+                    'state': stateId
+                },
+                success: function (data) {
+                    $("#id_lga").html(data);
+                }
+            });
+        });
+    </script>
