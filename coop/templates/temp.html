@@ -1,0 +1,94 @@
+{% load static %}
+
+<!--<nav id="navbar" class="navbar d-none d-sm-block d-md-block">-->
+<!--    <ul>-->
+<!--        <li class="dropdown">-->
+<!--            <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true"-->
+<!--               aria-expanded="false">-->
+<!--                <img src="{% static 'dashboard\images\icon\avatar-01.jpg' %}" class="mx-2" height="20" width="20">-->
+<!--                <span>Abdul-Muhaymeen</span>-->
+<!--            </a>-->
+<!--            <ul class="">-->
+<!--                <li class="">-->
+<!--                    <div class="dropdown-header">-->
+<!--                        <span style="font-size: 16px">Abdul-Muhaymeen</span> <br>-->
+<!--                        <small>GRTP/KN/2020/00001</small>-->
+<!--                    </div>-->
+<!--                </li>-->
+<!--                <div class="dropdown-divider"></div>-->
+<!--                <li><a href="#">Dashboard</a></li>-->
+<!--                <li class="dropdown">-->
+<!--                    <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"-->
+<!--                       aria-haspopup="true" aria-expanded="false"><span>Applications</span>-->
+<!--                    </a>-->
+<!--                    <ul>-->
+<!--                        <li><a href="#">Facilities</a></li>-->
+<!--                        <li><a href="#">Foodstuffs</a></li>-->
+<!--                        <li><a href="#">Livestock</a></li>-->
+<!--                        <li><a href="#">Shares</a></li>-->
+<!--                        <li><a href="#">Loan</a></li>-->
+<!--                    </ul>-->
+<!--                </li>-->
+<!--                <li class="dropdown">-->
+<!--                    <a href="#" role="button" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"-->
+<!--                       aria-haspopup="true" aria-expanded="false"><span>Settings</span>-->
+<!--                    </a>-->
+<!--                    <ul>-->
+<!--                        <li><a href="#">Update Profile</a></li>-->
+<!--                        <li><a href="#">Change Password</a></li>-->
+<!--                    </ul>-->
+<!--                </li>-->
+<!--                <li><a href="#">History</a></li>-->
+<!--                <li class="dropdown-divider"></li>-->
+<!--                <li><a href="#">Logout</a></li>-->
+<!--            </ul>-->
+<!--        </li>-->
+<!--    </ul>-->
+<!--    <i class="bi bi-three-dots-vertical mobile-nav-toggle"></i>-->
+<!--</nav>&lt;!&ndash; .navbar &ndash;&gt;-->
+
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <button class="navbar-toggler border-0 bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="bi bi-three-dots-vertical"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Dashboard</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="applications" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        Applications
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="applications">
+                        <li><a class="dropdown-item" href="#">Facility</a></li>
+                        <li><a class="dropdown-item" href="#">Foodstuff</a></li>
+                        <li><a class="dropdown-item" href="#">Livestock</a></li>
+                        <li><a class="dropdown-item" href="#">Loan</a></li>
+                        <li><a class="dropdown-item" href="#">Shares</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="settings" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        Settings
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="settings">
+                        <li><a class="dropdown-item" href="#">Update Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Update Password</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">History</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" tabindex="-1">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

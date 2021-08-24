@@ -1,0 +1,299 @@
+{% load static %}
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+            <ol>
+                <li><a href="#">Home</a></li>
+                <li>Dashboard</li>
+            </ol>
+
+            <div class="d-flex justify-content-between">
+                <h2>Dashboard</h2>
+                <div class="d-lg-none d-xl-none">
+                    {% include 'temp.html' %}
+                </div>
+            </div>
+        </div>
+    </section><!-- End Breadcrumbs -->
+
+    <section id="inner-page-content" class="inner-page">
+        <div class="container">
+            <div class="mb-2 mb-md-5"> <!-- -->
+                <!--       Mobile user dropdown menu         -->
+<!--                <div class="d-flex justify-content-end d-none d-sm-block d-md-block" id="user-mobile">-->
+
+<!--                </div>-->
+                <!--                -->
+                <div class="card-deck">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-12">
+                            <div class="card text-white bg-success mb-3">
+                                <div class="card-header">Target Savings</div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">#1,500,000</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12">
+                            <div class="card text-white bg-info mb-3">
+                                <div class="card-header">Monthly Pledge</div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">#1,500,000</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12">
+                            <div class="card text-white bg-primary mb-3">
+                                <div class="card-header">Shares (<small>3 Units</small>)</div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">#1,500,000</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-12">
+                            <div class="card text-white bg-danger mb-3">
+                                <div class="card-header">Loan Balance</div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">#0</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-lg-4 col-12"> <!-- -->
+                    <div class="mb-3 mb-md-5"> <!-- -->
+                        <div class="card text-center">
+                            <img src="{% static 'dashboard\images\icon\avatar-03.jpg' %}" class="card-img-top" >
+                            <div class="card-body">
+                                <h5 class="card-title">Abdul-muhaymeen Abdul-hameed</h5>
+                                <span class="card-text">GRTP/KN/2021/00001</span> <br>
+                                <span class="card-text">muhaymeen118@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 col-lg-8 col-12">
+                    <div class="mb-3 mb-md-5"> <!-- Personal details -->
+                        <div class="card clearfix">
+                            <div class="card-header">
+                                <h5 class="float-left">Personal Details
+                                </h5>
+                                <small class="float-right"><a href="#">Edit <i class="bi bi-pencil"></i></a></small>
+                            </div>
+                            <div class="card-body">
+                                <div class="row mb-3">
+                                    <div class="col-md-4 col-lg-4 col-sm-6 mb-3">
+                                        <h6 class="card-text">First name <br><small>Abdul-muhaymeen</small></h6>
+                                    </div>
+                                    <div class="col-md-4 col-lg-4 col-sm-6 mb-3">
+                                        <h6 class="card-text">Middle name <br><small>Olayiwola</small></h6>
+                                    </div>
+                                    <div class="col-md-4 col-lg-4 col-sm-6 mb-3">
+                                        <h6 class="card-text">Last name <br><small>Abdul-hameed</small></h6>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-4 col-lg-4 col-sm-6 mb-3">
+                                        <h6 class="card-text">Phone <br><small>08023432234</small></h6>
+                                    </div>
+                                    <div class="col-md-4 col-lg-4 col-sm-6 mb-3">
+                                        <h6 class="card-text">Date of Birth <br><small>12/12/1900</small></h6>
+                                    </div>
+                                    <div class="col-md-4 col-lg-4 col-sm-6 mb-3">
+                                        <h6 class="card-text">Gender <br><small>Male</small></h6>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-4 col-lg-4 col-sm-6 mb-3">
+                                        <h6 class="card-text">Marital Status <br><small>Married</small></h6>
+                                    </div>
+                                    <div class="col-md-4 col-lg-4 col-sm-6 mb-3">
+                                        <h6 class="card-text">Religion <br><small>Islam</small></h6>
+                                    </div>
+                                    <div class="col-md-4 col-lg-4 col-sm-6 mb-3">
+                                        <h6 class="card-text">Hometown <br><small>Abeokuta North</small></h6>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-4 col-lg-4 col-sm-6 mb-3">
+                                        <h6 class="card-text">Residential Address <br><small>1105, Old Airport, Dorayi Area, Kuntau, Kano.</small></h6>
+                                    </div>
+                                    <div class="col-md-4 col-lg-4 col-sm-6 mb-3">
+                                        <h6 class="card-text">State of Residence <br><small>Kano</small></h6>
+                                    </div>
+                                    <div class="col-md-4 col-lg-4 col-sm-6 mb-3">
+                                        <h6 class="card-text">Local Govt. <br><small>Dawakin Kudu</small></h6>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- End of personal details -->
+
+                    <div class="mb-3 mb-md-5"> <!-- Workplace -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="">
+                                    Details of Workplace
+                                </h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-6 mb-3">
+                                        <h6 class="card-text">Name of Workplace <br><small>Kuntau Science Academy</small></h6>
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <h6 class="card-text">Address <br><small>1, Court Road, Adjacent Federal High Court, Gyadi-Gyadi, Kano.</small></h6>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-6 mb-3">
+                                        <h6 class="card-text">Job Responsibility <br><small>Teaching</small></h6>
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <h6 class="card-text">Job Post <br><small>Teacher</small></h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- End of details of workplace -->
+
+                    <div class="mb-3 mb-md-5"> <!-- Next of Kin -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="">
+                                    Next of Kin Details
+                                </h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row mb-3">
+                                    <div class="col-md-4 col-lg-4 col-sm-6 mb-3">
+                                        <h6 class="card-text">Name <br><small>Zulaykha Adeola Abdulmojeed</small></h6>
+                                    </div>
+                                    <div class="col-md-4 col-lg-4 col-sm-6 mb-3">
+                                        <h6 class="card-text">Address <br><small>1, Court Road, Adjacent Federal High Court, Gyadi-Gyadi, Kano.</small></h6>
+                                    </div>
+                                    <div class="col-md-4 col-lg-4 col-sm-6 mb-3">
+                                        <h6 class="card-text">Age<br><small>55</small></h6>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <div class="col-md-4 col-lg-4 col-sm-6 mb-3">
+                                        <h6 class="card-text">Relationship <br><small>Wife</small></h6>
+                                    </div>
+                                    <div class="col-md-4 col-lg-4 col-sm-6 mb-3">
+                                        <h6 class="card-text">Occupation <br><small>Apprentice</small></h6>
+                                    </div>
+                                    <div class="col-md-4 col-lg-4 col-sm-6 mb-3">
+                                        <h6 class="card-text">Phone<br><small>09078657655</small></h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- End of Next of Kin -->
+
+                    <div class="mb-3 mb-md-5"> <!-- Referees -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="">
+                                    Referees
+                                </h5>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-text">Referee 1</h6>
+                                <hr class="mt-0">
+                                <div class="row mb-3">
+                                    <div class="col-md-4 col-lg-4 col-sm-6 mb-3">
+                                        <h6 class="card-text">Name <br><small>Abduljabbar Alao Mustopha</small></h6>
+                                    </div>
+                                    <div class="col-md-4 col-lg-4 col-sm-6 mb-3">
+                                        <h6 class="card-text">Phone <br><small>09122326753</small></h6>
+                                    </div>
+                                    <div class="col-md-4 col-lg-4 col-sm-6 mb-3">
+                                        <h6 class="card-text">Membership ID<br><small>GRTP/KN/2021/00002</small></h6>
+                                    </div>
+                                </div>
+
+                                <h6 class="card-text">Referee 2</h6>
+                                <hr class="mt-0">
+                                <div class="row mb-3">
+                                    <div class="col-md-4 col-lg-4 col-sm-6 mb-3">
+                                        <h6 class="card-text">Name <br><small>Abduljabbar Alao Mustopha</small></h6>
+                                    </div>
+                                    <div class="col-md-4 col-lg-4 col-sm-6 mb-3">
+                                        <h6 class="card-text">Phone <br><small>09122326753</small></h6>
+                                    </div>
+                                    <div class="col-md-4 col-lg-4 col-sm-6 mb-3">
+                                        <h6 class="card-text">Membership ID<br><small>GRTP/KN/2021/00002</small></h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- End of Referees -->
+
+                    <div class="mb-3 mb-md-5"> <!-- File Uploads -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="">
+                                    File Uploads
+                                </h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="card">
+                                            <img class="card-img-top img-thumbnail" src="{% static 'assets\img\portfolio\portfolio-4.jpg' %}" alt="Next of Kin Passport">
+                                            <div class="card-body text-center">
+                                                <p class="card-text">Next of Kin Passport</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="card">
+                                            <img class="card-img-top img-thumbnail" src="{% static 'assets\img\portfolio\portfolio-7.jpg' %}" alt="Next of Kin Passport">
+                                            <div class="card-body text-center">
+                                                <p class="card-text">Next of Kin ID</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="card">
+                                            <img class="card-img-top img-thumbnail" src="{% static 'assets\img\portfolio\portfolio-3.jpg' %}" alt="Next of Kin Passport">
+                                            <div class="card-body text-center">
+                                                <p class="card-text">Member's ID</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="card">
+                                            <img class="card-img-top img-thumbnail" src="{% static 'assets\img\portfolio\portfolio-8.jpg' %}" alt="Next of Kin Passport">
+                                            <div class="card-body text-center">
+                                                <p class="card-text">Receipt of Form</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="card">
+                                            <img class="card-img-top img-thumbnail" src="{% static 'assets\img\portfolio\portfolio-9.jpg' %}" alt="Next of Kin Passport">
+                                            <div class="card-body text-center">
+                                                <p class="card-text">Receipt of Registration</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- End of File Uploads -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main><!-- End #main -->

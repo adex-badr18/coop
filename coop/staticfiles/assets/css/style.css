@@ -9,11 +9,12 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Jost", "Open Sans", sans-serif;
   color: #444444;
 }
 
 a {
+  font-family: "Jost", "Open Sans", sans-serif;
   color: #47b2e4;
   text-decoration: none;
 }
@@ -423,7 +424,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero .btn-watch-video i {
   line-height: 0;
   color: #fff;
-  font-size: 15px;
+  font-size: 32px;
   transition: 0.3s;
   margin-right: 8px;
 }
@@ -500,7 +501,7 @@ h1, h2, h3, h4, h5, h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding: 30px 0;
   overflow: hidden;
 }
 
@@ -589,7 +590,7 @@ section {
   padding: 0;
 }
 
-.about .content ul li{
+.about .content ul li {
   padding-left: 28px;
   position: relative;
 }
@@ -865,29 +866,6 @@ section {
 
 .services .icon-box:hover h4 a {
   color: #47b2e4;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-ul li {
-  padding-left: 28px;
-  position: relative;
-}
-
-ul li + li {
-  margin-top: 10px;
-}
-
-ul i {
-  position: absolute;
-  left: 0;
-  top: 2px;
-  font-size: 20px;
-  color: #47b2e4;
-  line-height: 1;
 }
 
 /*--------------------------------------------------------------
@@ -1597,6 +1575,11 @@ ul i {
   }
 }
 
+/*New css for z-index*/
+section#inner-page-content #user-mobile {
+  /*background: #f3f5fa;*/
+}
+
 /*--------------------------------------------------------------
 # Breadcrumbs
 --------------------------------------------------------------*/
@@ -1637,6 +1620,11 @@ ul i {
   padding-right: 10px;
   color: #4668a2;
   content: "/";
+}
+
+/*- New css -*/
+.breadcrumbs .d-flex .dropdown .dropdown-menu {
+
 }
 
 /*--------------------------------------------------------------

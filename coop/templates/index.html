@@ -2,18 +2,22 @@
 {% load static %}
 {% load crispy_forms_tags %}
 
+{% block title %}GRT-PRISTINE{% endblock %}
+
+{% block css %}
+    <!-- Main CSS-->
+    <link href="{% static 'dashboa/css/styles.css' %}" rel="stylesheet" media="all">
+{% endblock %}
+<div>
 {% block content %}
 <!--    Hello, {{ user.first_name|default:'Guest' }} - {{ user.membership_id|default:'' }}-->
 
-<div>
+
     {% if user.is_authenticated %}
-    {% include 'navbar_auth.html' %}
-    <p><a href="{% url 'users:update_password' %}">Change password</a></p>
-    <p><a href="{% url 'users:profile_update' %}">Update Profile</a></p>
-    <p><a href="{% url 'users:logout' %}">Logout</a></p>
+    {% include 'navbar_auth.html' %} <!--Navbar-->
+    {% include 'main_profile.html' %}
     {% else %}
     {% include 'navbar_index.html' %} <!--Navbar-->
-
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex align-items-center">
 
@@ -27,8 +31,8 @@
                         Muslim Ummah.
                     </h2>
                     <div class="d-flex justify-content-center justify-content-lg-start">
-                        <a href="{% url 'users:signup' %}" class="btn-get-started scrollto">Become a member</a>
-                        <a href="{% url 'users:login' %}" class="btn-watch-video"><i
+                        <a href="{% url 'users:signup' %}" class="btn-get-started scrollto text-decoration-none">Become a member</a>
+                        <a href="{% url 'users:login' %}" class="btn-watch-video w-25 justify-content-center text-decoration-none border border-white rounded-pill"><i
                                 class="bi bi-unlock"></i><span>Login</span></a>
                     </div>
                 </div>
@@ -37,7 +41,6 @@
                 </div>
             </div>
         </div>
-
     </section><!-- End Hero -->
 
     <main id="main">
@@ -177,160 +180,163 @@
                     </div>
 
                     <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img"
-                         style='background-image: url("{% static 'assets/img/why-us.png' %}");' data-aos="zoom-in"
-                         data-aos-delay="150">&nbsp;
-                    </div>
-                </div>
-
-            </div>
-        </section><!-- End Eligibility Section -->
-
-        <!-- ======= Services Section ======= -->
-        <section id="services" class="services">
-            <div class="container" data-aos="fade-up">
-
-                <div class="section-title">
-                    <h2>Services</h2>
-                    <p>We offer financial products and services that improves the quality of life of our members.</p>
-                </div>
-
-                <div class="row">
-                    <div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in"
-                         data-aos-delay="100">
-                        <div class="icon-box">
-                            <div class="icon"><i class="bx bxl-dribbble"></i></div>
-                            <h4><a href="">Target Savings</a></h4>
-                            <p>Members can engage in target savings for specific needs such as hajj/umrah,
-                                school fees, house rent, partake in investments, and so on.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in"
-                         data-aos-delay="200">
-                        <div class="icon-box">
-                            <div class="icon"><i class="bx bx-file"></i></div>
-                            <h4><a href="">Consumer Facilities</a></h4>
-                            <p>Members can order for facilities such as regular consumables, special commodity request,
-                                ramadan needs, eid-ul-fitr/eid-ul-kabir needs, etc.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in"
-                         data-aos-delay="300">
-                        <div class="icon-box">
-                            <div class="icon"><i class="bx bx-tachometer"></i></div>
-                            <h4><a href="">Islamic Financial Products</a></h4>
-                            <p>Members can engage in islamic services such as investment partnership (mudharabah),
-                                cost-plus financing (murabaha), benevolent lending (qard) and joint enterprise
-                                (musharaka).
-                            </p>
-                        </div>
-                    </div>
+                         style='background-image: url("{% static ' assets
+                    /img/why-us.png' %}");' data-aos="zoom-in"
+                    data-aos-delay="150">&nbsp;
                 </div>
             </div>
-        </section><!-- End Services Section -->
 
-        <!-- ======= Contact Section ======= -->
-        <section id="contact" class="contact section-bg">
-            <div class="container" data-aos="fade-up">
-
-                <div class="section-title">
-                    <h2>Contact</h2>
-                    <p>For more enquiries, you can reach us via any of the contact information below.
-                        We'll be ready to give you timely response in sha Allah.</p>
-                </div>
-
-                <div class="row">
-
-                    <div class="col-lg-5 d-flex align-items-stretch">
-                        <div class="info">
-                            <div class="address">
-                                <i class="bi bi-geo-alt"></i>
-                                <h4>Alkhair Islamic Academy</h4>
-                                <p>73, Kudu Ibrahim Khalil Street, Rijiyar Zaki, Gwarzo Road, Kano.</p>
-                            </div>
-
-                            <div class="address">
-                                <i class="bi bi-geo-alt"></i>
-                                <h4>Silver Spoon Restaurant</h4>
-                                <p>Shop 2 & 3, Rafin Dan Nana, Rijiyar Zaki, Gwarzo Road, Kano.</p>
-                            </div>
-
-                            <div class="address">
-                                <i class="bi bi-geo-alt"></i>
-                                <h4>Al-murabbi Printing Co.</h4>
-                                <p>Opp. Nipco Filling Station, Janbulo 2nd Gate, Gwarzo Road, Kano.</p>
-                            </div>
-
-                            <div class="address">
-                                <i class="bi bi-geo-alt"></i>
-                                <h4>Al-qibla International Academy</h4>
-                                <p>132, Rijiyar Zaki Gabas, Behind New Police Station, Gwarzo Road, Kano.</p>
-                            </div>
-
-                            <div class="email">
-                                <i class="bi bi-envelope"></i>
-                                <h4>Email:</h4>
-                                <p>grtpristinemulticoop@gmail.com</p>
-                            </div>
-
-                            <div class="phone">
-                                <i class="bi bi-phone"></i>
-                                <h4>Phone:</h4>
-                                <p>08065580920 | 08032528663</p>
-                            </div>
-
-<!--                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"-->
-<!--                                    frameborder="0" style="border:0; width: 100%; height: 290px;"-->
-<!--                                    allowfullscreen></iframe>-->
-                        </div>
-
-                    </div>
-
-                    <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-                        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                            <div class="row">
-                                <div class="form-group col-md-6">
-                                    <label for="name">Your Name</label>
-                                    <input type="text" name="name" class="form-control" id="name" required>
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="name">Your Email</label>
-                                    <input type="email" class="form-control" name="email" id="email" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="name">Subject</label>
-                                <input type="text" class="form-control" name="subject" id="subject" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="name">Message</label>
-                                <textarea class="form-control" name="message" rows="10" required></textarea>
-                            </div>
-                            <div class="my-3">
-                                <div class="loading">Loading</div>
-                                <div class="error-message"></div>
-                                <div class="sent-message">Your message has been sent. Thank you!</div>
-                            </div>
-                            <div class="text-center">
-                                <button type="submit">Send Message</button>
-                            </div>
-                        </form>
-                    </div>
-
-                </div>
-
-            </div>
-        </section><!-- End Contact Section -->
-
-    </main><!-- End #main -->
-
-    {% endif %}
 </div>
+</section><!-- End Eligibility Section -->
+
+<!-- ======= Services Section ======= -->
+<section id="services" class="services">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>Services</h2>
+            <p>We offer financial products and services that improves the quality of life of our members.</p>
+        </div>
+
+        <div class="row">
+            <div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in"
+                 data-aos-delay="100">
+                <div class="icon-box">
+                    <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                    <h4><a href="">Target Savings</a></h4>
+                    <p>Members can engage in target savings for specific needs such as hajj/umrah,
+                        school fees, house rent, partake in investments, and so on.</p>
+                </div>
+            </div>
+
+            <div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in"
+                 data-aos-delay="200">
+                <div class="icon-box">
+                    <div class="icon"><i class="bx bx-file"></i></div>
+                    <h4><a href="">Consumer Facilities</a></h4>
+                    <p>Members can order for facilities such as regular consumables, special commodity request,
+                        ramadan needs, eid-ul-fitr/eid-ul-kabir needs, etc.</p>
+                </div>
+            </div>
+
+            <div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in"
+                 data-aos-delay="300">
+                <div class="icon-box">
+                    <div class="icon"><i class="bx bx-tachometer"></i></div>
+                    <h4><a href="">Islamic Financial Products</a></h4>
+                    <p>Members can engage in islamic services such as investment partnership (mudharabah),
+                        cost-plus financing (murabaha), benevolent lending (qard) and joint enterprise
+                        (musharaka).
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!-- End Services Section -->
+
+<!-- ======= Contact Section ======= -->
+<section id="contact" class="contact section-bg">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>Contact</h2>
+            <p>For more enquiries, you can reach us via any of the contact information below.
+                We'll be ready to give you timely response in sha Allah.</p>
+        </div>
+
+        <div class="row">
+
+            <div class="col-lg-5 d-flex align-items-stretch">
+                <div class="info">
+                    <div class="address">
+                        <i class="bi bi-geo-alt"></i>
+                        <h4>Alkhair Islamic Academy</h4>
+                        <p>73, Kudu Ibrahim Khalil Street, Rijiyar Zaki, Gwarzo Road, Kano.</p>
+                    </div>
+
+                    <div class="address">
+                        <i class="bi bi-geo-alt"></i>
+                        <h4>Silver Spoon Restaurant</h4>
+                        <p>Shop 2 & 3, Rafin Dan Nana, Rijiyar Zaki, Gwarzo Road, Kano.</p>
+                    </div>
+
+                    <div class="address">
+                        <i class="bi bi-geo-alt"></i>
+                        <h4>Al-murabbi Printing Co.</h4>
+                        <p>Opp. Nipco Filling Station, Janbulo 2nd Gate, Gwarzo Road, Kano.</p>
+                    </div>
+
+                    <div class="address">
+                        <i class="bi bi-geo-alt"></i>
+                        <h4>Al-qibla International Academy</h4>
+                        <p>132, Rijiyar Zaki Gabas, Behind New Police Station, Gwarzo Road, Kano.</p>
+                    </div>
+
+                    <div class="email">
+                        <i class="bi bi-envelope"></i>
+                        <h4>Email:</h4>
+                        <p>grtpristinemulticoop@gmail.com</p>
+                    </div>
+
+                    <div class="phone">
+                        <i class="bi bi-phone"></i>
+                        <h4>Phone:</h4>
+                        <p>08065580920 | 08032528663</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+                <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="name">Your Name</label>
+                            <input type="text" name="name" class="form-control" id="name" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="name">Your Email</label>
+                            <input type="email" class="form-control" name="email" id="email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Subject</label>
+                        <input type="text" class="form-control" name="subject" id="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Message</label>
+                        <textarea class="form-control" name="message" rows="10" required></textarea>
+                    </div>
+                    <div class="my-3">
+                        <div class="loading">Loading</div>
+                        <div class="error-message"></div>
+                        <div class="sent-message">Your message has been sent. Thank you!</div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit">Send Message</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+</section><!-- End Contact Section -->
+
+</main><!-- End #main -->
+
+{% endif %}
+
 {% endblock %}
+</div>
 
 {% block return %}
 <div id="preloader"></div>
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
         class="bi bi-arrow-up-short"></i></a>
+{% endblock %}
+
+{% block js %}
+    <!-- Main JS-->
+    <script src="{% static 'dashboa/js/scripts.js' %}"></script>
 {% endblock %}
