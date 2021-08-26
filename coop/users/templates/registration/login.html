@@ -103,7 +103,7 @@ form{
         <div class="container">
 
             <ol>
-                <li><a href="">Home</a></li>
+                <li><a href="{% url 'users:index' %}">Home</a></li>
                 <li>Login</li>
             </ol>
             <h2>Login</h2>
@@ -179,7 +179,7 @@ form{
                         <div class="row">
                             <div class="col mx-auto mb-4">
                                 <a href="#">Forgot Password?</a> |
-                                <a href="#">Register Here</a>
+                                <a href="{% url 'users:signup' %}">Register Here</a>
                             </div>
                         </div>
                     </div>

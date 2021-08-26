@@ -94,12 +94,21 @@ WSGI_APPLICATION = 'coop.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'coop',
-        'USER': 'coop_user',
-        'PASSWORD': 'coop',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': '',
+        'PORT': '',
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+        }
+        # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        # 'NAME': 'coop',
+        # 'USER': 'coop_user',
+        # 'PASSWORD': 'coop',
+        # 'HOST': '127.0.0.1',
+        # 'PORT': '5432',
     }
 }
 
